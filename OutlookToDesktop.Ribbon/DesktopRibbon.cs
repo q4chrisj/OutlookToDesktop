@@ -8,6 +8,8 @@ namespace OutlookAddIn
         private void Ribbon_Load(object sender, RibbonUIEventArgs e)
         {
             sndButton.Click += SndButton_Click;    
+
+            // 
         }
 
         private void SndButton_Click(object sender, RibbonControlEventArgs e)
