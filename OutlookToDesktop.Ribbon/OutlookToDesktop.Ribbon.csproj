@@ -175,7 +175,6 @@
     <EmbeddedResource Include="DesktopRibbon.resx">
       <DependentUpon>DesktopRibbon.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="OutlookAddIn_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -203,6 +202,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Q4%28box%29_CMYK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked-checkbox-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

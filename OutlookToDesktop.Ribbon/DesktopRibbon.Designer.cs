@@ -37,6 +37,7 @@
             this.tab1 = this.Factory.CreateRibbonTab();
             this.desktopGroup = this.Factory.CreateRibbonGroup();
             this.sndButton = this.Factory.CreateRibbonButton();
+            this.btnRemove = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.desktopGroup.SuspendLayout();
             this.SuspendLayout();
@@ -52,17 +53,26 @@
             // desktopGroup
             // 
             this.desktopGroup.Items.Add(this.sndButton);
-            this.desktopGroup.Label = "Q4 Desktop";
+            this.desktopGroup.Items.Add(this.btnRemove);
+            this.desktopGroup.Label = "Q4 Desktop Actions";
             this.desktopGroup.Name = "desktopGroup";
             this.desktopGroup.Position = this.Factory.RibbonPosition.BeforeOfficeId("GroupClipboard");
             // 
             // sndButton
             // 
             this.sndButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.sndButton.Image = global::OutlookAddIn.Properties.Resources.Q4_box__CMYK;
-            this.sndButton.Label = "Send";
+            this.sndButton.Image = global::OutlookAddIn.Properties.Resources.checked_checkbox_512;
+            this.sndButton.Label = "Sync ";
             this.sndButton.Name = "sndButton";
             this.sndButton.ShowImage = true;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnRemove.Image = global::OutlookAddIn.Properties.Resources.remove;
+            this.btnRemove.Label = "Remove";
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.ShowImage = true;
             // 
             // DesktopRibbon
             // 
@@ -83,6 +93,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup desktopGroup;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton sndButton;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnRemove;
     }
 
     partial class ThisRibbonCollection
