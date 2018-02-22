@@ -34,26 +34,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tab1 = this.Factory.CreateRibbonTab();
+            this.desktopTab = this.Factory.CreateRibbonTab();
             this.desktopGroup = this.Factory.CreateRibbonGroup();
             this.sndButton = this.Factory.CreateRibbonButton();
-            this.btnRemove = this.Factory.CreateRibbonButton();
-            this.tab1.SuspendLayout();
+            this.desktopTab.SuspendLayout();
             this.desktopGroup.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tab1
+            // desktopTab
             // 
-            this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
-            this.tab1.ControlId.OfficeId = "TabAppointment";
-            this.tab1.Groups.Add(this.desktopGroup);
-            this.tab1.Label = "TabAppointment";
-            this.tab1.Name = "tab1";
+            this.desktopTab.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
+            this.desktopTab.ControlId.OfficeId = "TabAppointment";
+            this.desktopTab.Groups.Add(this.desktopGroup);
+            this.desktopTab.Label = "TabAppointment";
+            this.desktopTab.Name = "desktopTab";
             // 
             // desktopGroup
             // 
             this.desktopGroup.Items.Add(this.sndButton);
-            this.desktopGroup.Items.Add(this.btnRemove);
             this.desktopGroup.Label = "Q4 Desktop Actions";
             this.desktopGroup.Name = "desktopGroup";
             this.desktopGroup.Position = this.Factory.RibbonPosition.BeforeOfficeId("GroupClipboard");
@@ -66,22 +64,14 @@
             this.sndButton.Name = "sndButton";
             this.sndButton.ShowImage = true;
             // 
-            // btnRemove
-            // 
-            this.btnRemove.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnRemove.Image = global::OutlookAddIn.Properties.Resources.remove;
-            this.btnRemove.Label = "Remove";
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.ShowImage = true;
-            // 
             // DesktopRibbon
             // 
             this.Name = "DesktopRibbon";
             this.RibbonType = "Microsoft.Outlook.Appointment";
-            this.Tabs.Add(this.tab1);
+            this.Tabs.Add(this.desktopTab);
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.Ribbon_Load);
-            this.tab1.ResumeLayout(false);
-            this.tab1.PerformLayout();
+            this.desktopTab.ResumeLayout(false);
+            this.desktopTab.PerformLayout();
             this.desktopGroup.ResumeLayout(false);
             this.desktopGroup.PerformLayout();
             this.ResumeLayout(false);
@@ -90,10 +80,9 @@
 
         #endregion
 
-        internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonTab desktopTab;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup desktopGroup;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton sndButton;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnRemove;
     }
 
     partial class ThisRibbonCollection

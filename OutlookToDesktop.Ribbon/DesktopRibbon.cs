@@ -17,32 +17,14 @@ namespace OutlookAddIn
 
         private void Ribbon_Load(object sender, RibbonUIEventArgs e)
         {
-            btnRemove.Click += BtnRemove_Click;
             sndButton.Click += SndButton_Click;
 
-            LoadRibbon();
-        }
-
-        private void LoadRibbon()
-        {
-            btnRemove.Enabled = _isSynced ? true : false;
-            sndButton.Enabled = _isSynced ? false : true;
-        }
-
-        private void BtnRemove_Click(object sender, RibbonControlEventArgs e)
-        {
-            string message = "The appointment has been removed from Q4 Desktop";
-            _isSynced = false;
-
-            LoadRibbon();
-            MessageBox.Show(message, _captionTitle);
         }
 
         private void SndButton_Click(object sender, RibbonControlEventArgs e)
         {
             string message = "The appointment has been synced to Q4 Desktop";
             _isSynced = true;
-            LoadRibbon();
 
             MessageBox.Show(message, _captionTitle);
         }

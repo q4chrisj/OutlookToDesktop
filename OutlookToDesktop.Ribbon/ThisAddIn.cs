@@ -7,7 +7,14 @@ namespace OutlookAddIn
     {
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+            Outlook.Application outlook = Globals.ThisAddIn.Application;
+            outlook.OptionsPagesAdd += Outlook_OptionsPagesAdd;
 
+        }
+
+        private void Outlook_OptionsPagesAdd(Outlook.PropertyPages Pages)
+        {
+            Pages.Add(new OptionsPage(), "");
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
