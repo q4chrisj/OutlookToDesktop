@@ -28,6 +28,7 @@
     <AssemblyName>OutlookAddIn</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>publish\</PublishUrl>
     <InstallUrl />
@@ -37,7 +38,6 @@
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>days</UpdateIntervalUnits>
-    <IsWebBootstrapper>False</IsWebBootstrapper>
     <ProductName>OutlookAddIn</ProductName>
     <PublisherName />
     <SupportUrl />
@@ -243,6 +243,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApiService\OutlookToDesktop.ApiService.csproj">
+      <Project>{577a6e7f-980f-4045-a983-6d8c81a075f9}</Project>
+      <Name>OutlookToDesktop.ApiService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

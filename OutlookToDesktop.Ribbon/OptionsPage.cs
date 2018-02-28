@@ -18,8 +18,8 @@ namespace OutlookAddIn
 
         protected override void OnLoad(EventArgs e)
         {
-            txtUsername.Text = Properties.Settings.Default.Username;
-            txtPassword.Text = Properties.Settings.Default.Password;
+            txtEmail.Text = Properties.Settings.Default.Email ?? "";
+            txtPassword.Text = Properties.Settings.Default.Password ?? "";
 
             base.OnLoad(e);
         }
@@ -54,9 +54,11 @@ namespace OutlookAddIn
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Username = txtUsername.Text;
-            Properties.Settings.Default.Password = txtUsername.Text;
+            Properties.Settings.Default.Email = txtEmail.Text;
+            Properties.Settings.Default.Password = txtEmail.Text;
             Properties.Settings.Default.Save();
+
+            isDirty = true;
         }
     }
 }

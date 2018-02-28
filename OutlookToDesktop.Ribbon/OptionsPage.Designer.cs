@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblUsername
+            // lblEmail
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(4, 8);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(55, 13);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "Username";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(4, 8);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.TabIndex = 0;
+            this.lblEmail.Text = "Email";
             // 
-            // txtUsername
+            // txtEmail
             // 
-            this.txtUsername.Location = new System.Drawing.Point(66, 4);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(186, 20);
-            this.txtUsername.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(66, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(186, 20);
+            this.txtEmail.TabIndex = 1;
             // 
             // lblPassword
             // 
@@ -85,8 +85,8 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblEmail);
             this.Name = "OptionsPage";
             this.Size = new System.Drawing.Size(266, 106);
             this.ResumeLayout(false);
@@ -96,8 +96,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnSave;
