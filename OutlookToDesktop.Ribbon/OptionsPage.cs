@@ -55,7 +55,7 @@ namespace OutlookAddIn
         private void btnSave_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Email = txtEmail.Text;
-            Properties.Settings.Default.Password = txtEmail.Text;
+            Properties.Settings.Default.Password = txtPassword.Text;
             Properties.Settings.Default.Save();
 
             isDirty = true;

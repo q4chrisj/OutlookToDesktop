@@ -29,7 +29,7 @@ namespace OutlookToDesktop.ApiService
 
             var values = new Dictionary<string, string>
             {
-                { "email", _email },
+                { "user", _email },
                 { "password", _password },
                 { "product", "desktop" }
             };
