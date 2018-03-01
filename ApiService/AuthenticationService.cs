@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ namespace OutlookToDesktop.ApiService
 {
     public interface IAuthenticationService
     {
-        Task<string> Authenticate();
+        Task<AuthenticationResultModel> Authenticate();
     }
 
     public class AuthenticationService : IAuthenticationService
@@ -23,7 +24,7 @@ namespace OutlookToDesktop.ApiService
             _password = password;
         }
 
-        public async Task<string> Authenticate()
+        public async Task<AuthenticationResultModel> Authenticate()
         {
             HttpClient client = new HttpClient();
 
@@ -40,7 +41,9 @@ namespace OutlookToDesktop.ApiService
 
             var responseString = await response.Content.ReadAsStringAsync();
 
-            return responseString;
+            var result = JsonConvert.DeserializeObject<AuthenticationResultModel>(responseString);
+
+            return result;
         }
     }
 }

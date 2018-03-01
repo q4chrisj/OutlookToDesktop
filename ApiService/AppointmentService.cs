@@ -1,25 +1,36 @@
-﻿namespace OutlookToDesktop.ApiService
+﻿using Newtonsoft.Json;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+namespace OutlookToDesktop.ApiService
 {
     public interface IAppointmentService
     {
-        void SyncAppointment();
+        Task SyncAppointmentAsync(AppointmentSyncModel model);
     }
 
-    public class AppointmentService : IAppointmentService
+    public class AppointmentService : ServiceBase, IAppointmentService
     {
-        private readonly IAuthenticationService _authenticationService;
-        private readonly string _token;
+        private readonly string _appointmentEndPoint;
 
-        public AppointmentService(IAuthenticationService authenticationService)
+        public AppointmentService(IAuthenticationService authenticationService, string desktopDomain) : base(authenticationService, desktopDomain)
         {
-            _authenticationService = authenticationService;
-            var task = _authenticationService.Authenticate();
-            _token = task.GetAwaiter().GetResult();
+            _appointmentEndPoint = String.Concat(desktopDomain, "/api/crm/activity");
         }
 
-        public void SyncAppointment()
+        public async Task SyncAppointmentAsync(AppointmentSyncModel model)
         {
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Authorization", String.Format("Bearer {0}", _token));
 
+            var content = JsonConvert.SerializeObject(model);
+
+            var response = await client.PostAsync(_appointmentEndPoint, new StringContent(content));
+
+            var responseString = await response.Content.ReadAsStringAsync();
+
+            var result = JsonConvert.DeserializeObject<AuthenticationResultModel>(responseString);
         }
     }
 }

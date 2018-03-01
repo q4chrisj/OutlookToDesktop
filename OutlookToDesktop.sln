@@ -1,13 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookToDesktop.Ribbon", "OutlookToDesktop.Ribbon\OutlookToDesktop.Ribbon.csproj", "{3183407A-4043-4E27-A6AB-0480AA20DB6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookToDesktop.ApiService", "ApiService\OutlookToDesktop.ApiService.csproj", "{577A6E7F-980F-4045-A983-6D8C81A075F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutlookToDesktop.ApiService", "ApiService\OutlookToDesktop.ApiService.csproj", "{577A6E7F-980F-4045-A983-6D8C81A075F9}"
 EndProject
 Global
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -27,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B30FFB41-5110-45A5-8E6A-D4809C4CC2DC}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
