@@ -16,11 +16,13 @@ namespace OutlookToDesktop.ApiService
 
         public AppointmentService(IAuthenticationService authenticationService, string desktopDomain) : base(authenticationService, desktopDomain)
         {
-            _appointmentEndPoint = String.Concat(desktopDomain, "/api/crm/activity");
+            _appointmentEndPoint = String.Concat(desktopDomain, "/api/crm/outlook");
         }
 
         public async Task SyncAppointmentAsync(AppointmentSyncModel model)
         {
+            model.Profile = _profile;
+
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("Authorization", String.Format("Bearer {0}", _token));
 

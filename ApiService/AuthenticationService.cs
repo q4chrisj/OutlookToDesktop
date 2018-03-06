@@ -9,6 +9,7 @@ namespace OutlookToDesktop.ApiService
     public interface IAuthenticationService
     {
         Task<AuthenticationResultModel> Authenticate();
+        AuthenticationResultModel AuthenitcationResult { get; set; }
     }
 
     public class AuthenticationService : IAuthenticationService
@@ -23,6 +24,8 @@ namespace OutlookToDesktop.ApiService
             _email = email;
             _password = password;
         }
+
+        public AuthenticationResultModel AuthenitcationResult { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public async Task<AuthenticationResultModel> Authenticate()
         {
