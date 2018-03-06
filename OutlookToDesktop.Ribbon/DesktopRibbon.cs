@@ -1,7 +1,7 @@
-﻿
-using Microsoft.Office.Interop.Outlook;
+﻿using Microsoft.Office.Interop.Outlook;
 using Microsoft.Office.Tools.Ribbon;
 using OutlookToDesktop.ApiService;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace OutlookAddIn
@@ -60,13 +60,18 @@ namespace OutlookAddIn
                 UnRead = appointment.UnRead
             };
 
-            //foreach (Recipient recipient in appointment.Recipients)
-            //{
-            //    if(recipient != null)
-            //    { 
-            //        desktopAppointment.Recipients.Add(recipient.Name);
-            //    }
-            //}
+            desktopAppointment.Recipients = new List<RecipientModel>();
+            foreach (Recipient recipient in appointment.Recipients)
+            {
+                if (recipient != null)
+                {
+                    desktopAppointment.Recipients.Add(new RecipientModel
+                    {
+                        Name = recipient.Name,
+                        Email = recipient.Address
+                    });
+                }
+            }
 
             var appointmentSyncModel = new AppointmentSyncModel();
             appointmentSyncModel.Data = desktopAppointment;

@@ -7,7 +7,7 @@
         protected string _token;
         protected ProfileModel _profile;
 
-        public ServiceBase(IAuthenticationService authenticationService, string desktopDomain)
+        public ServiceBase(IAuthenticationService authenticationService)
         {
             _authenticationService = authenticationService;
             var task = _authenticationService.Authenticate();

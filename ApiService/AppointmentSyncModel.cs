@@ -80,7 +80,7 @@ namespace OutlookToDesktop.ApiService
         public string Organizer { get; set; }
 
         [JsonProperty("recipients")]
-        public List<string> Recipients { get; set; }
+        public List<RecipientModel> Recipients { get; set; }
 
         [JsonProperty("reminderMinutesBeforeStart")]
         public int ReminderMinutesbeforeStart { get; set; }
@@ -117,5 +117,16 @@ namespace OutlookToDesktop.ApiService
 
         [JsonProperty("netShowUrl")]
         public string NetShowUrl { get; set; }
+    }
+
+    public class RecipientModel
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("email")]
+        public string Email { get; set; }
+
+        public int ResponseStatus { get; set; }
     }
 }

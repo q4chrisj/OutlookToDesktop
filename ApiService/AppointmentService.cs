@@ -14,7 +14,7 @@ namespace OutlookToDesktop.ApiService
     {
         private readonly string _appointmentEndPoint;
 
-        public AppointmentService(IAuthenticationService authenticationService, string desktopDomain) : base(authenticationService, desktopDomain)
+        public AppointmentService(IAuthenticationService authenticationService, string desktopDomain) : base(authenticationService)
         {
             _appointmentEndPoint = String.Concat(desktopDomain, "/api/crm/outlook");
         }
