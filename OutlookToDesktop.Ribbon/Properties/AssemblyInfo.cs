@@ -9,9 +9,9 @@ using System.Security;
 [assembly: AssemblyTitle("OutlookAddIn")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Q4 Inc")]
 [assembly: AssemblyProduct("OutlookAddIn")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2018")]
+[assembly: AssemblyCopyright("Copyright © Q4 Inc 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
