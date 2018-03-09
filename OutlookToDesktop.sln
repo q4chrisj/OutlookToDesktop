@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookToDesktop.Ribbon", "OutlookToDesktop.Ribbon\OutlookToDesktop.Ribbon.csproj", "{3183407A-4043-4E27-A6AB-0480AA20DB6A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutlookToDesktop.ApiService", "ApiService\OutlookToDesktop.ApiService.csproj", "{577A6E7F-980F-4045-A983-6D8C81A075F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutlookToDesktop.ApiService", "OutlookToDesktop.ApiService\OutlookToDesktop.ApiService.csproj", "{577A6E7F-980F-4045-A983-6D8C81A075F9}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AddinSetup", "AddinSetup\AddinSetup.vdproj", "{5F319A77-8FB5-4FFA-A27F-B2F9BD8E2590}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OutlookToDesktop.Setup", "OutlookToDesktop.Setup\AddinSetup.vdproj", "{5F319A77-8FB5-4FFA-A27F-B2F9BD8E2590}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
