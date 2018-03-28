@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using log4net;
+using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace OutlookToDesktop.ApiService
     {
         private readonly string _appointmentEndPoint;
 
-        public AppointmentService(IAuthenticationService authenticationService, string desktopDomain) : base(authenticationService)
+        public AppointmentService(IAuthenticationService authenticationService, string desktopDomain, ILog logger) : base(authenticationService, logger)
         {
             _appointmentEndPoint = String.Concat(desktopDomain, "/api/crm/outlook");
         }
@@ -27,6 +28,8 @@ namespace OutlookToDesktop.ApiService
             client.DefaultRequestHeaders.Add("Authorization", String.Format("Bearer {0}", _token));
 
             var content = JsonConvert.SerializeObject(model);
+
+            _log.Info(content);
 
             var response = await client.PostAsync(_appointmentEndPoint, new StringContent(content));
 
