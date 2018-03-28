@@ -1,7 +1,6 @@
 ﻿using Microsoft.Office.Interop.Outlook;
 using Microsoft.Office.Tools.Ribbon;
 using OutlookToDesktop.ApiService;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace OutlookAddIn
