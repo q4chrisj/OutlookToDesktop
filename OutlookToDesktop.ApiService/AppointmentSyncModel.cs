@@ -6,6 +6,9 @@ namespace OutlookToDesktop.ApiService
 {
     public class AppointmentSyncModel
     {
+        /// <summary>
+        /// To Do: Confirm with Alex B that we don't need this (I'm pretty sure he said we didn't, but let's confirm)
+        /// </summary>
         [JsonProperty("profile")]
         public ProfileModel Profile { get; set; }
 

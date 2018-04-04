@@ -12,6 +12,8 @@ namespace OutlookAddIn
     {
         private readonly string _captionTitle = "Q4 Desktop";
         private readonly string _desktopDomain = "https://develop.q4touch.com";
+        // For local debugging with Alex B
+        // private readonly string _desktopDomain = "http://192.168.12.108:3001";
 
         private void Ribbon_Load(object sender, RibbonUIEventArgs e)
         {
@@ -22,7 +24,6 @@ namespace OutlookAddIn
         private void SndButton_Click(object sender, RibbonControlEventArgs e)
         {
             ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-
             IAuthenticationService authenticationService = new AuthenticationService(_desktopDomain, Properties.Settings.Default.Email, Properties.Settings.Default.Password);
             IAppointmentService appointmentService = new AppointmentService(authenticationService, _desktopDomain, Log);
 
@@ -32,7 +33,7 @@ namespace OutlookAddIn
             var appointmentSyncModelFactory = new AppointmentSyncModelFactory();
             var appointmentSyncModel = appointmentSyncModelFactory.Create(appointment);
             
-            appointmentService.SyncAppointmentAsync(appointmentSyncModel);
+            var task = appointmentService.SyncAppointmentAsync(appointmentSyncModel);
 
             string message = "The appointment has been synced to Q4 Desktop";
 
