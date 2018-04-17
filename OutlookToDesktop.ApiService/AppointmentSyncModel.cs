@@ -58,6 +58,9 @@ namespace OutlookToDesktop.ApiService
         [JsonProperty("end")]
         public DateTime End { get; set; }
 
+        [JsonProperty("globalappointmentid")]
+        public string GlobalAppointmentID { get; set; }
+
         [JsonProperty("isOnlineMeeting")]
         public bool IsOnlineMeeting { get; set; }
 

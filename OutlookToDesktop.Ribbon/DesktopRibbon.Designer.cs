@@ -59,7 +59,7 @@
             // sndButton
             // 
             this.sndButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.sndButton.Image = global::OutlookAddIn.Properties.Resources.checked_checkbox_512;
+            this.sndButton.Image = global::OutlookAddIn.Properties.Resources.sync_2pt;
             this.sndButton.Label = "Sync ";
             this.sndButton.Name = "sndButton";
             this.sndButton.ShowImage = true;

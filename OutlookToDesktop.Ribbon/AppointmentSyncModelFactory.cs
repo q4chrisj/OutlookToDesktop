@@ -18,6 +18,7 @@ namespace OutlookAddIn
                 CreationTime = appointmentItem.CreationTime,
                 Duration = appointmentItem.Duration,
                 End = appointmentItem.End,
+                GlobalAppointmentID = appointmentItem.GlobalAppointmentID,
                 IsOnlineMeeting = appointmentItem.IsOnlineMeeting,
                 IsRecurring = appointmentItem.IsRecurring,
                 Location = appointmentItem.Location,
